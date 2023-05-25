@@ -1,0 +1,241 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.root{
+    background: linear-gradient(to right, #ff65c3, #fedb5b);
+    min-height: 100vh;
+    padding-bottom: 10vh;
+}
+.nav{
+    background-color: white;
+    display: flex;
+    height: 11vh;
+    padding-inline:clamp(.5rem,5vw,3rem) ;
+    justify-content: center;
+    width:auto;
+    align-items: center;
+    
+}
+.nav ul{
+    align-items: center;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: auto;
+    font-size: clamp(1rem,1.7vw,2.1vw);
+    letter-spacing: 2px;
+    width: clamp(50vw,65vw,70vw);
+    font-weight: 100;
+    
+}
+.nav-link{
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier();
+}
+
+.nav .nav-logo-container{
+    align-items: center;
+    /* background-color: cornflowerblue; */
+    display: flex;
+}
+.nav .nav-logo-container a{
+    margin-left: 1rem;
+    
+}
+.nav .nav-logo-container a img{
+height: clamp(1.5rem,2vw,2rem);
+}
+.icon{
+    display: none;
+}
+/* Body Section */
+.body-image-container{
+position: relative;
+height:clamp(40vh,80vh,90vh);
+}
+.body-image-container img{
+    width: 100%;
+    height:100%;
+  object-fit: cover;
+    
+}
+.body-desc{
+    background-color:#e86560ac;
+    color: white;
+    position: absolute;
+    left:8vw;
+    top:20vh;
+    padding-right:3vw;
+    padding-left: 3vw;
+    padding-block: 7vh;
+    letter-spacing: 2px;
+    line-height: 3vh;
+    width:40vw;
+    
+}
+.body-desc p{
+margin-top: 3vh;
+font-size: 2vh;
+}
+
+/* Card Section */
+.order-now{
+    text-align: center;
+    color: white;
+    font-size:2.5rem;
+    margin-block: 10vh;
+}
+.card-container{
+/* background-color: cadetblue; */
+display: flex;
+margin-bottom: 10px;
+justify-content: center;
+column-gap:12vw;
+}
+.card{
+    background-color:white;
+    /* padding-inline:1vw ; */
+    /* padding-block: 1vh; */
+    width: 250px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* row-gap: 1vh; */
+    text-align: center;
+    border-radius: 0px 50px;
+    font-size: medium;
+    
+}
+.card-image-container{
+    /* background-color: #fedb5b; */
+    width: 220px;
+    height: 220px;
+border-radius: 0px 50px 0px 0px;
+}
+.card-image-container img{
+height: 100%;
+width: 100%;
+margin-bottom:1vh ;
+border-radius: 0px 50px 0px 0px;
+}
+.card p{
+    font-size:1rem;
+    padding-inline: 10px;
+    line-height: 1.2rem;
+
+}
+.card h2{
+    font-size: 1.2rem;
+}
+
+.order-btn{
+margin-block: 15vh;
+width:clamp(8rem,12vw,12rem) ;
+height:clamp(2rem,8vh,4rem) ;
+margin-inline: auto;
+border-radius: 50px;
+border: none;
+font-size: 1rem;
+font-weight: 600;
+background-color: #fec9b9bd;
+padding-inline: 10px;
+}
+
+.btn-container{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+#check{
+    display: none;
+}
+@media  screen and (max-width:960px)  {
+    .card-container{
+        column-gap: 5vw;
+        
+        
+    }
+    .card{
+        background-color: white;
+       
+            width: 240px;
+            height: 330px;
+           
+           
+            
+            
+    }
+    .card-image-continer{
+width: 200px;
+    height: 200px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:821px){
+    .nav ul{
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        background-color: #ff65c3;
+        left: 0;
+        top:11vh;
+        z-index:9;
+        justify-content:flex-start;
+        row-gap: 10vh;
+        padding-block:2rem ;
+        font-size: 1rem;
+        
+        /* display: none; */
+    }
+    
+        .nav .nav-logo-container {
+            align-items: center;
+            /* background-color: cornflowerblue; */
+            display: flex;
+            margin-left: auto;
+            
+ 
+        }
+        .burger-icon-container{
+            border: none;
+        }
+        .icon{
+            display: block;
+        }
+                .body-desc {
+                    background-color: #e86560ac;
+                    color: white;
+                    position: absolute;
+                    left: 8vw;
+                    top: 20vh;
+                    padding-right: 3vw;
+                    padding-left: 3vw;
+                    padding-block: 7vh;
+                    letter-spacing: 2px;
+                    line-height: 3vh;
+                    width: 50vw;
+        
+                }
+        
+           .body-desc h1{
+            font-size: 2rem;
+            line-height: 5vh;
+
+           }
+                   .card-container {
+                       flex-direction: column;
+                       align-items: center;
+                       row-gap: 10vh;
+        
+        
+                   }
+}
